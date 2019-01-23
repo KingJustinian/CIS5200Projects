@@ -33,6 +33,14 @@ public class PairComparator implements Comparator<Pair> {
         }
     }
 
+    /**
+     * Per the Javadoc for Comparator, this method should return true if "the 
+     * specified object is also a comparator and it imposes the same ordering as 
+     * this comparator." This is true if the classes are the same.
+     * 
+     * @param c
+     * @return 
+     */
     @Override
     public boolean equals(Object c) {
 
