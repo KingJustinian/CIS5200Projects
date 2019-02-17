@@ -2,12 +2,13 @@ package cis5200.project8;
 
 import java.awt.Color;
 import java.security.SecureRandom;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
+ * CIS5200-W01
+ * Project 8, Exercise 23.10
+ * Justin Burden
  *
- * @author justin
+ * @author Justin Burden
  */
 public class Ball implements Runnable {
     BouncingBallPanel ballPanel;

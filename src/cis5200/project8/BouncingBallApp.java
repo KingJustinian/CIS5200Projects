@@ -3,8 +3,11 @@ package cis5200.project8;
 import javax.swing.JFrame;
 
 /**
+ * CIS5200-W01
+ * Project 8, Exercise 23.10
+ * Justin Burden
  *
- * @author justin
+ * @author Justin Burden
  */
 public class BouncingBallApp {
     

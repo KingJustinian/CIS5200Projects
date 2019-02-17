@@ -5,14 +5,16 @@ import java.awt.Graphics2D;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.geom.Ellipse2D;
-import java.util.Arrays;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import javax.swing.JPanel;
 
 /**
+ * CIS5200-W01
+ * Project 8, Exercise 23.10
+ * Justin Burden
  *
- * @author justin
+ * @author Justin Burden
  */
 public class BouncingBallPanel extends JPanel implements MouseListener {
 
@@ -28,7 +30,7 @@ public class BouncingBallPanel extends JPanel implements MouseListener {
     
     @Override
     public void mouseClicked(MouseEvent me) {
-        if (ballCount < 20) {
+        if (ballCount < balls.length) {
             Ball ball = new Ball(this);
             balls[ballCount++] = ball;
 
