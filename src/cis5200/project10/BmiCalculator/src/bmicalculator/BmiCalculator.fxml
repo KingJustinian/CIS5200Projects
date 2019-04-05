@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="550.0" vgap="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bmicalculator.BmiCalculatorController">
+  <columnConstraints>
+    <ColumnConstraints minWidth="10.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label fx:id="heightLabel" text="Height" GridPane.halignment="RIGHT">
+         <padding>
+            <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+         </padding>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></Label>
+      <Label fx:id="weightLabel" text="Weight" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <padding>
+            <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+         </padding></Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <RadioButton fx:id="englishRadioButton" minWidth="100.0" mnemonicParsing="false" selected="true" text="English">
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="unitToggleGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="metricRadioButton" minWidth="100.0" mnemonicParsing="false" text="Metric" toggleGroup="$unitToggleGroup">
+               <padding>
+                  <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+               </padding></RadioButton>
+         </children>
+      </HBox>
+      <Label fx:id="unitLabel" text="Unit" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+         <padding>
+            <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+         </padding></Label>
+      <Label fx:id="bmiLabel" text="BMI" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <padding>
+            <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+         </padding></Label>
+      <Button fx:id="calculateButton" maxWidth="1.7976931348623157E308" minWidth="-Infinity" mnemonicParsing="false" onAction="#calculateButtonPressed" text="Calculate" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></Button>
+      <TextField fx:id="heightTextField" promptText="Inches" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="weightTextField" promptText="Pounds" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+      <TextField fx:id="bmiTextField" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+      <Label fx:id="bmiValuesLabel" text="BMI Values" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="underweightLabel" text="Underweight: less than 18.5" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+      <Label fx:id="normalLabel" text="Normal: between 18.5 and 24.9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+      <Label fx:id="overweightLabel" text="Overweight: between 25 and 29.9" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <Label fx:id="obeseLabel" text="Obese: 30 or greater" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
